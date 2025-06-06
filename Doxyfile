@@ -1,0 +1,171 @@
+# Doxyfile 1.13.2 - Fully configured for Argxc
+
+#---------------------------------------------------------------------------
+# Project Info
+#---------------------------------------------------------------------------
+
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "Argx"
+PROJECT_NUMBER         = 1.0.2-build
+PROJECT_BRIEF          = "Simple argument parser made in C"
+OUTPUT_DIRECTORY       = docs/
+CREATE_SUBDIRS         = YES
+ALLOW_UNICODE_NAMES    = YES
+OUTPUT_LANGUAGE        = English
+
+#---------------------------------------------------------------------------
+# Input
+#---------------------------------------------------------------------------
+
+INPUT                  = inc/ src/ README.md
+FILE_PATTERNS          = *.h *.c *.md *.dox
+RECURSIVE              = YES
+EXAMPLE_RECURSIVE      = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+INPUT_ENCODING         = UTF-8
+
+#---------------------------------------------------------------------------
+# Output
+#---------------------------------------------------------------------------
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = YES
+GENERATE_XML           = YES
+XML_OUTPUT             = xml
+GENERATE_MAN           = YES
+GENERATE_RTF           = YES
+GENERATE_DOCBOOK       = YES
+GENERATE_SQLITE3       = NO
+
+#---------------------------------------------------------------------------
+# Source Code Browsing
+#---------------------------------------------------------------------------
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+VERBATIM_HEADERS       = NO
+STRIP_CODE_COMMENTS    = NO
+
+#---------------------------------------------------------------------------
+# Build Control
+#---------------------------------------------------------------------------
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_ANON_NSPACES   = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_LOCAL_METHODS  = NO
+RESOLVE_UNNAMED_PARAMS = YES
+
+#---------------------------------------------------------------------------
+# Member/Doc Behavior
+#---------------------------------------------------------------------------
+
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+HIDE_IN_BODY_DOCS      = NO
+INLINE_INHERITED_MEMB  = YES
+FULL_PATH_NAMES        = YES
+SHOW_HEADERFILE        = YES
+SHOW_INCLUDE_FILES     = YES
+SHOW_USED_FILES        = YES
+INLINE_INFO            = YES
+
+#---------------------------------------------------------------------------
+# Warnings
+#---------------------------------------------------------------------------
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_IF_INCOMPLETE_DOC = YES
+WARN_NO_PARAMDOC       = YES
+WARN_LOGFILE           = docs/doxygen_warnings.log
+
+#---------------------------------------------------------------------------
+# Preprocessor
+#---------------------------------------------------------------------------
+
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+PREDEFINED = __cplusplus=201103L \
+             "DEPRECATED(x)=" \
+             "NODISCARD=" \
+             "CONSTEXPR=constexpr" \
+             "NOEXCEPT=noexcept"
+INCLUDE_PATH           = inc/ /usr/include /usr/local/include
+SKIP_FUNCTION_MACROS   = NO
+
+#---------------------------------------------------------------------------
+# Language/Output Optimization
+#---------------------------------------------------------------------------
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_OUTPUT_VHDL   = NO
+OPTIMIZE_OUTPUT_SLICE  = NO
+EXTENSION_MAPPING      = h=C inc=C
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+JAVADOC_AUTOBRIEF      = NO
+QT_AUTOBRIEF           = NO
+MULTILINE_CPP_IS_BRIEF = YES
+INHERIT_DOCS           = YES
+CPP_CLI_SUPPORT        = NO
+BUILTIN_STL_SUPPORT    = YES
+SIP_SUPPORT            = NO
+
+#---------------------------------------------------------------------------
+# Sorting
+#---------------------------------------------------------------------------
+
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = YES
+SORT_MEMBERS_CTORS_1ST = YES
+SORT_GROUP_NAMES       = YES
+
+#---------------------------------------------------------------------------
+# Graphs and Diagrams
+#---------------------------------------------------------------------------
+
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+DIRECTORY_GRAPH        = YES
+GRAPHICAL_HIERARCHY    = YES
+DOT_IMAGE_FORMAT       = png
+DOT_CLEANUP            = YES
+
+#---------------------------------------------------------------------------
+# HTML Config
+#---------------------------------------------------------------------------
+
+HTML_COLORSTYLE        = AUTO_LIGHT
+HTML_DYNAMIC_MENUS     = YES
+HTML_CODE_FOLDING      = YES
+HTML_COPY_CLIPBOARD    = YES
+GENERATE_TREEVIEW      = YES
+ENUM_VALUES_PER_LINE   = 4
+
+#---------------------------------------------------------------------------
+# Miscellaneous
+#---------------------------------------------------------------------------
+
+ALIASES                = "code{1}=\code{.c} \1 \endcode" \
+                         "sideeffect=\par Side Effects:^^" \
+                         "thread_safety=\par Thread Safety:^^" \
+                         "complexity=\par Complexity:^^" \
+                         "pre=\par Preconditions:^^" \
+                         "post=\par Postconditions:^^"
+GENERATE_TAGFILE       = docs/argx.tag
+LAYOUT_FILE            = 
+CITE_BIB_FILES         = 

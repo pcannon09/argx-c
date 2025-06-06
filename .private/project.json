@@ -1,0 +1,16 @@
+{
+	"exeName": "argxc",
+	"name": "argxc",
+
+	"version": "1.0.2",
+	"versionState": "build",
+	"versionSTD": "20250606",
+
+	"about":
+	{
+		"by": "pcannon09",
+		"profile": "https://github.com/pcannon09",
+		"information": "Simple argument parser made in C"
+	}
+}
+
