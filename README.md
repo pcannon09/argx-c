@@ -1,11 +1,11 @@
 # ARGX-C - 1.0.2-build
-## C++ Argument parser
+## C Argument parser
 ### Made by: pcannon09
 
 ---
 
 ## Requirements
-### Compiler and C++ Standard Support
+### Compiler and C Standard Support
 | Argx Version | Minimum C Standard | GCC      | Clang      | MSVC              |
 | ------------ | ------------------ | -------- | ---------- | ----------------- |
 | 1.0.2-build  | C99                | GCC 3.0+ | Clang 2.6+ | MSVC 2013+ (VC12) |
