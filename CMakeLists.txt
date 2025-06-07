@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
 
 # Read project metadata
-file(READ "${CMAKE_SOURCE_DIR}/.private/project.json" PROJECT_INFO)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/.private/project.json" PROJECT_INFO)
 string(JSON PROJECT_NAME GET "${PROJECT_INFO}" exeName)
 string(JSON PROJECT_VERSION GET "${PROJECT_INFO}" version)
 string(JSON PROJECT_VERSION_STATE GET "${PROJECT_INFO}" versionState)
@@ -21,9 +21,9 @@ set(CMAKE_BUILD_TYPE Debug)
 cmake_policy(SET CMP0147 NEW)
 
 # Directory structure
-set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
-set(INC_DIR "${CMAKE_SOURCE_DIR}/inc")
-set(TESTS_DIR "${CMAKE_SOURCE_DIR}/tests")
+set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
+set(INC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/inc")
+set(TESTS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/tests")
 
 # Source files
 set(HEADERS
@@ -94,7 +94,7 @@ install(DIRECTORY ${INC_DIR}/ DESTINATION include/${PROJECT_NAME})
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(
-    "${CMAKE_SOURCE_DIR}/cmake/Config.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Config.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
     INSTALL_DESTINATION lib/cmake/${PROJECT_NAME}
 )
